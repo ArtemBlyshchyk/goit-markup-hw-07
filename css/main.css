@@ -12,7 +12,7 @@
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.check-text, .header__container, .header-navigation, .header-contacts-list__link, .newsletter-btn-text {
+.check-text, .header__container, .header-navigation, .header-contacts-list__link, .newsletter-btn__text {
   display: flex;
   align-items: center;
 }
@@ -446,7 +446,7 @@ body {
   padding: 200px 0 280px 0;
 }
 
-.hero-text {
+.hero__text {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -459,7 +459,7 @@ body {
   margin-bottom: 30px;
 }
 
-.hero-btn {
+.hero__btn {
   font-family: inherit;
   font-weight: bold;
   font-size: 16px;
@@ -478,7 +478,7 @@ body {
   transition: background-color 250ms var(--timing-function);
 }
 
-.hero-btn:hover, .hero-btn:focus {
+.hero__btn:hover, .hero__btn:focus {
   background-color: #188ce8;
   cursor: pointer;
 }
@@ -487,7 +487,7 @@ body {
   padding: 94px 0;
 }
 
-.service-icon-bg {
+.service-bg {
   width: 270px;
   height: 120px;
   background-color: #f5f4fa;
@@ -497,7 +497,7 @@ body {
   align-items: center;
 }
 
-.service-icon {
+.service-bg__icon {
   width: 70px;
   height: 70px;
 }
@@ -511,7 +511,7 @@ body {
   margin: 0 0 10px 0;
 }
 
-.service-text {
+.service-bg__text {
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
@@ -523,7 +523,7 @@ body {
   justify-content: space-between;
 }
 
-.service-item:not(:last-child) {
+.service-list__item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -586,11 +586,7 @@ body {
   justify-content: space-between;
 }
 
-.team-item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.team-item {
+.team-list__item {
   width: calc((100%-90px) / 4);
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -598,7 +594,11 @@ body {
   padding-bottom: 30px;
 }
 
-.team-imagine {
+.team-list__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team-list__imagine {
   margin-bottom: 30px;
 }
 
@@ -627,16 +627,16 @@ body {
 /* .social-item:not(:last-child) {
     margin-right: 10px;
   } */
-.social-item {
+.social-list__item {
   width: 44px;
   height: 44px;
 }
 
-.social-item + .social-item {
+.social-list__item + .social-list__item {
   margin-left: 10px;
 }
 
-.social-link {
+.social-list__link {
   width: 100%;
   height: 100%;
   background-color: #ffffff;
@@ -647,19 +647,19 @@ body {
   transition: background-color 250ms var(--timing-function);
 }
 
-.social-link:hover, .social-link:focus {
+.social-list__link:hover, .social-list__link:focus {
   background-color: var(--accent-color);
 }
 
-.social-icon {
+.social-list__icon {
   width: 20px;
   height: 20px;
   fill: #afb1b8;
   transition: fill 250ms var(--timing-function);
 }
 
-.social-link:hover .social-icon,
-.social-link:focus .social-icon {
+.social-list__link:hover .social-list__icon,
+.social-list__link:focus .social-list__icon {
   fill: #ffffff;
 }
 
@@ -682,16 +682,16 @@ body {
   justify-content: center;
 }
 
-.clients-item {
+.clients-list__item {
   width: 170px;
   height: 92px;
 }
 
-.clients-item + .clients-item {
+.clients-list__item + .clients-list__item {
   margin-left: 30px;
 }
 
-.clients-link {
+.clients-list__link {
   width: 100%;
   height: 100%;
   background-color: #ffffff;
@@ -703,17 +703,17 @@ body {
   transition: border-color 250ms var(--timing-function);
 }
 
-.clients-link:hover, .clients-link:focus {
+.clients-list__link:hover, .clients-list__link:focus {
   border-color: var(--accent-color);
 }
 
-.clients-icon {
+.clients-list__icon {
   fill: #afb1b8;
   transition: fill 250ms var(--timing-function);
 }
 
-.clients-link:hover .clients-icon,
-.clients-link:focus .clients-icon {
+.clients-list__link:hover .clients-list__icon,
+.clients-list__link:focus .clients-list__icon {
   fill: var(--accent-color);
 }
 
@@ -721,21 +721,21 @@ body {
   padding: 60px 0;
 }
 
-.footer-container {
+.footer__container {
   display: flex;
   align-items: baseline;
   /* align-items: center; */
 }
 
-.fotter-background {
+.footer__background {
   background-color: #2f303a;
 }
 
-.footer-bottom-logo {
+.footer-container {
   margin-bottom: 20px;
 }
 
-.footer-logo {
+.footer-container__logo {
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -744,7 +744,7 @@ body {
   color: var(--accent-color);
 }
 
-.footer-logo-word {
+.footer-container__word {
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -757,30 +757,23 @@ body {
   font-style: normal;
 }
 
-.footer-item:not(:last-child) {
+.footer-list__item:not(:last-child) {
   margin: 0 0 9px 0;
 }
 
-.footer-link {
+.footer-list__link {
   font-size: 14px;
   line-height: 1.71;
   color: var(--third-text-color);
   transition: color 250ms var(--timing-function);
 }
 
-.footer-link:hover, .footer-link:focus {
+.footer-list__link:hover, .footer-list__link:focus {
   color: var(--accent-color);
 }
 
-.footer-link-contacts {
-  font-size: 14px;
-  line-height: 1.71;
+.footer-list__contacts {
   color: rgba(255, 255, 255, 0.6);
-  transition: color 250ms var(--timing-function);
-}
-
-.footer-link-contacts:hover, .footer-link-contacts:focus {
-  color: var(--accent-color);
 }
 
 .common-container {
@@ -800,16 +793,16 @@ body {
   display: flex;
 }
 
-.social-network-item {
+.social-network-list__item {
   width: 44px;
   height: 44px;
 }
 
-.social-network-item + .social-network-item {
+.social-network-list__item + .social-network-list__item {
   margin-left: 10px;
 }
 
-.social-network-link {
+.social-network-list__link {
   width: 100%;
   height: 100%;
   display: flex;
@@ -820,11 +813,11 @@ body {
   transition: background-color 250ms var(--timing-function);
 }
 
-.social-network-link:hover, .social-network-link:focus {
+.social-network-list__link:hover, .social-network-list__link:focus {
   background-color: var(--accent-color);
 }
 
-.social-network-icon {
+.social-network-list__icon {
   width: 20px;
   height: 20px;
   fill: #ffffff;
@@ -904,7 +897,7 @@ body {
   transform: translateY(-140%);
 }
 
-.newsletter-btn-text {
+.newsletter-btn__text {
   font-weight: bold;
   font-size: 16px;
   line-height: calc(30 / 16);
