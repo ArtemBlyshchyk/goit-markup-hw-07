@@ -9,15 +9,6 @@
     padding: 94px 0 94px 0;
   }
   
-  .portfolio-btn:hover,
-  .portfolio-btn:focus {
-    color: var(--third-text-color);
-    background-color: var(--accent-color);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-      0px 2px 2px rgba(0, 0, 0, 0.12);
-    cursor: pointer;
-  }
-  
   .portfolio-list {
     display: flex;
     justify-content: center;
@@ -39,8 +30,16 @@
     padding: 6px 22px;
     border-radius: 4px;
     transition: color 250ms var(--timing-function),
-      background-color 250ms var(--timing-function),
-      box-shadow 250ms var(--timing-function);
+    background-color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
+    &:hover,
+    &:focus {
+      color: var(--third-text-color);
+      background-color: var(--accent-color);
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+      cursor: pointer;
+    }
   }
   
   /* применяем временно portfolio-btn*/
@@ -56,12 +55,7 @@
     flex-wrap: wrap;
   }
   
-  .portfolio-item-img:hover,
-  .portfolio-item-img:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-      1px 4px 6px rgba(0, 0, 0, 0.16);
-    cursor: pointer;
-  }
+
   
   .portfolio-item-img {
     width: 370px;
@@ -70,14 +64,18 @@
     margin-bottom: 30px;
     border: 1px solid #eeeeee;
     transition: box-shadow 250ms var(--timing-function);
-  }
-  
-  .portfolio-item-img:nth-child(3n) {
-    margin-right: 0;
-  }
-  
-  .portfolio-item-img:nth-last-child(-n + 3) {
-    margin-bottom: 0;
+    &:hover,
+    &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+      cursor: pointer;
+    }
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+    &:nth-last-child(-n + 3) {
+      margin-bottom: 0;
+    }
   }
   
   .portfolio-imagine-text {
@@ -101,11 +99,10 @@
     padding: 63px 24px;
     transform: translateY(100%);
     transition: transform 250ms var(--timing-function);
-  }
-  
-  .portfolio-item-img:hover .imagine-description {
-    transform: translateY(0);
-    background: rgba(33, 150, 243, 0.9);
+    .portfolio-item-img:hover & {
+      transform: translateY(0);
+      background: rgba(33, 150, 243, 0.9);
+    }
   }
   
   .portfolio-title {

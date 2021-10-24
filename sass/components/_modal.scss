@@ -10,17 +10,15 @@
     justify-content: center;
     align-items: center;
     transition: opacity 250ms var(--timing-function),
-      visibility 250ms var(--timing-function);
-  }
-  
-  .backdrop.is-hidden {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-  }
-  
-  .backdrop.is-hidden .modal {
-    transform: scale(0.5);
+    visibility 250ms var(--timing-function);
+    &.is-hidden {
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+      .modal {
+        transform: scale(0.5);
+      }
+    }
   }
   
   .modal {
@@ -47,15 +45,13 @@
     box-sizing: border-box;
     position: absolute;
     outline: none;
-  }
-  
-  .modal-icon-container:hover {
-    cursor: pointer;
-  }
-  
-  .modal-icon-container:hover .modal-close-button,
-  .modal-icon-container:focus .modal-close-button {
-    fill: var(--accent-color);
+    &:hover {
+      cursor: pointer;
+    }
+    &:hover .modal-close-button, 
+    &:focus .modal-close-button {
+        fill: var(--accent-color);
+    }
   }
   
   .modal-close-button {
@@ -99,15 +95,13 @@
     padding-right: 15px;
     outline: none;
     transition: border-color 250ms var(--timing-function);
-  }
-  
-  .input-name:focus {
-    border-color: var(--accent-color);
-    cursor: pointer;
-  }
-  
-  .input-name:focus + .inpute-icon {
-    fill: var(--accent-color);
+    &:focus {
+      border-color: var(--accent-color);
+      cursor: pointer;
+      & + .inpute-icon {
+          fill: var(--accent-color);
+      }
+    }
   }
   
   .inpute-icon {
@@ -128,20 +122,18 @@
     border-radius: 4px;
     padding: 12px 16px;
     outline: none;
+    &:focus {
+      border-color: var(--accent-color);
+      cursor: pointer;
+    }
+    &::placeholder {
+      font-size: 12px;
+      line-height: calc(14 / 12);
+      letter-spacing: 0.01em;
+      color: rgba(117, 117, 117, 0.5);
+    }
   }
-  
-  .modal-comments:focus {
-    border-color: var(--accent-color);
-    cursor: pointer;
-  }
-  
-  .modal-comments::placeholder {
-    font-size: 12px;
-    line-height: calc(14 / 12);
-    letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
-  }
-  
+    
   /* Custom checkbox */
   .check-text {
     font-size: 14px;
@@ -153,39 +145,38 @@
     /* Для третьего варианта кастомного чекбокса*/
     /* position: relative;
     align-items: flex-start; */
+    .conditions {
+      color: lightseagreen;
+    }
+    span {
+      width: 16px;
+      height: 15px;
+      border: 2px solid #212121;
+      border-radius: 3px;
+      margin-right: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 250ms var(--timing-function); 
+    }
   }
-  
-  .check-text .conditions {
-    color: lightseagreen;
-  }
-  
-  .check-text span {
-    width: 16px;
-    height: 15px;
-    border: 2px solid #212121;
-    border-radius: 3px;
-    margin-right: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 250ms var(--timing-function);
-  }
-  
+   
   .check-box-icon {
     width: 11px;
     height: 8px;
   }
   
-  .modal-checkbox:checked + .check-text span {
-    background-color: var(--accent-color);
-    border: none;
-  }
-  
-  .modal-checkbox.visually-hidden {
-    position: absolute;
-    overflow: hidden;
-    opacity: 0;
-  }
+  .modal-checkbox {
+    &:checked + .check-text span {
+      background-color: var(--accent-color);
+      border: none;
+    }
+    &.visually-hidden {
+      position: absolute;
+      overflow: hidden;
+      opacity: 0;
+    }
+}
   
   /* 2-й вариант кастомного чекбокса (через фон)*/
   
@@ -258,12 +249,11 @@
     margin: 0 auto;
     outline: none;
     transition: background-color 250ms var(--timing-function);
-  }
-  
-  .modal-btn:hover,
-  .modal-btn:focus {
-    background-color: #188ce8;
-    cursor: pointer;
+    &:hover,
+    &:focus {
+     background-color: #188ce8;
+     cursor: pointer; 
+    }
   }
   
   .modal-btn-title {

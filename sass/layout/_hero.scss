@@ -28,12 +28,6 @@
     margin-bottom: 30px;
   }
   
-  .hero-btn:hover,
-  .hero-btn:focus {
-    background-color: #188ce8;
-    cursor: pointer;
-  }
-  
   .hero-btn {
     font-family: inherit;
     font-weight: bold;
@@ -51,4 +45,9 @@
     border-radius: 4px;
     outline: none;
     transition: background-color 250ms var(--timing-function);
+    &:hover,
+    &:focus {
+      background-color: #188ce8;
+      cursor: pointer;
+    }
   }

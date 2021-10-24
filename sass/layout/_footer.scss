@@ -37,30 +37,30 @@
     font-style: normal;
   }
   
-  .footer-item:not(:last-child) {
-    margin: 0 0 9px 0;
+  .footer-item {
+    &:not(:last-child) {
+      margin: 0 0 9px 0;
+    }
   }
   
-  .footer-link:hover,
-  .footer-link:focus {
-    color: var(--accent-color);
-  }
   .footer-link {
     font-size: 14px;
     line-height: 1.71;
     color: var(--third-text-color);
     transition: color 250ms var(--timing-function);
+    &:hover, &:focus {
+      color: var(--accent-color);
+    }
   }
   
-  .footer-link-contacts:hover,
-  .footer-link-contacts:focus {
-    color: var(--accent-color);
-  }
   .footer-link-contacts {
     font-size: 14px;
     line-height: 1.71;
     color: rgba(255, 255, 255, 0.6);
     transition: color 250ms var(--timing-function);
+    &:hover, &:focus {
+      color: var(--accent-color);
+    }
   }
   
   .common-container {
@@ -83,10 +83,9 @@
   .social-network-item {
     width: 44px;
     height: 44px;
-  }
-  
-  .social-network-item + .social-network-item {
-    margin-left: 10px;
+    & + & {
+      margin-left: 10px;
+    }
   }
   
   .social-network-link {
@@ -98,13 +97,11 @@
     justify-content: center;
     align-items: center;
     transition: background-color 250ms var(--timing-function);
+    &:hover, &:focus {
+      background-color: var(--accent-color);
+    }
   }
-  
-  .social-network-link:hover,
-  .social-network-link:focus {
-    background-color: var(--accent-color);
-  }
-  
+    
   .social-network-icon {
     width: 20px;
     height: 20px;
@@ -141,18 +138,16 @@
     padding: 15px 16px;
     margin-right: 12px;
     color: var(--third-text-color);
+    &::placeholder {
+      font-size: 16px;
+      line-height: calc(20 / 16);
+      color: rgba(255, 255, 255, 0.6);
+    }
+    &:focus {
+      border-color: #ffffff;
+    }
   }
-  
-  .mail-text::placeholder {
-    font-size: 16px;
-    line-height: calc(20 / 16);
-    color: rgba(255, 255, 255, 0.6);
-  }
-  
-  .mail-text:focus {
-    border-color: #ffffff;
-  }
-  
+    
   .btn-icon {
     position: relative;
   }
@@ -167,12 +162,10 @@
     padding-left: 29px;
     transition: background-color 250ms var(--timing-function);
     outline: none;
-  }
-  
-  .newsletter-btn:hover,
-  .newsletter-btn:focus {
-    background-color: #188ce8;
-    cursor: pointer;
+    &:hover, &:focus {
+      background-color: #188ce8;
+      cursor: pointer;
+    }
   }
   
   .subscribe-icon {
