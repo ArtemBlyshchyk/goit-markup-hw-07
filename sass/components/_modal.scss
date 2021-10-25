@@ -34,7 +34,7 @@
     padding: 40px;
   }
   
-  .modal-icon-container {
+  .icon-container {
     width: 30px;
     height: 30px;
     top: 8px;
@@ -48,19 +48,20 @@
     &:hover {
       cursor: pointer;
     }
-    &:hover .modal-close-button, 
-    &:focus .modal-close-button {
+ 
+  }
+  
+  .icon-container__close-button {
+    width: 11px;
+    height: 11px;
+    transition: fill 250ms var(--timing-function);
+    .icon-container:hover &, 
+    .icon-container:focus & {
         fill: var(--accent-color);
     }
   }
   
-  .modal-close-button {
-    width: 11px;
-    height: 11px;
-    transition: fill 250ms var(--timing-function);
-  }
-  
-  .modal-title {
+  .modal__title {
     font-weight: bold;
     font-size: 20px;
     line-height: calc(23 / 20);
@@ -76,7 +77,7 @@
     position: relative;
   }
   
-  .modal-form-name {
+  .modal-form__name {
     font-size: 12px;
     line-height: calc(14 / 12);
     letter-spacing: 0.01em;
@@ -85,7 +86,7 @@
     margin-bottom: 4px;
   }
   
-  .input-name {
+  .modal-form__input {
     width: 100%;
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -98,13 +99,13 @@
     &:focus {
       border-color: var(--accent-color);
       cursor: pointer;
-      & + .inpute-icon {
+      & + .modal-form__icon {
           fill: var(--accent-color);
       }
     }
   }
   
-  .inpute-icon {
+  .modal-form__icon {
     width: 18px;
     height: 18px;
     position: absolute;
@@ -113,7 +114,7 @@
     transition: fill 250ms var(--timing-function);
   }
   
-  .modal-comments {
+  .form-label__comments {
     width: 100%;
     height: 120px;
     resize: none;
@@ -144,7 +145,7 @@
     /* Для третьего варианта кастомного чекбокса*/
     /* position: relative;
     align-items: flex-start; */
-    .conditions {
+    .check-text__conditions {
       color: lightseagreen;
     }
     span {
@@ -160,7 +161,7 @@
     }
   }
    
-  .check-box-icon {
+  .check-text__icon {
     width: 11px;
     height: 8px;
   }
@@ -255,7 +256,7 @@
     }
   }
   
-  .modal-btn-title {
+  .modal-btn__title {
     font-weight: bold;
     font-size: 16px;
     line-height: calc(30 / 16);
